@@ -68,11 +68,12 @@ function Home() {
               className="aspect-[4/5] w-full rounded-[2rem] object-cover shadow-soft md:aspect-[5/6]"
             />
             <div className="absolute -bottom-6 left-6 flex items-center gap-3 rounded-2xl border border-border bg-card px-5 py-4 shadow-card">
-              <span className="font-display text-3xl font-medium text-primary">15+</span>
+              <span className="grid size-10 place-items-center rounded-full bg-secondary text-primary">
+                <Clock className="size-5" />
+              </span>
               <span className="text-sm leading-tight text-muted-foreground">
-                anos cuidando
-                <br />
-                de sorrisos
+                <strong className="block font-semibold text-foreground">Seg. a sáb.</strong>
+                horários estendidos
               </span>
             </div>
           </div>
