@@ -19,7 +19,7 @@ type Errors = Partial<Record<"name" | "email" | "phone" | "service" | "message" 
 
 const fieldClass = "h-12 rounded-xl bg-background";
 
-export function AppointmentForm({ defaultService }: { defaultService?: string }) {
+export function AppointmentForm({ defaultService }: { defaultService?: string | undefined }) {
   const send = useServerFn(submitAppointment);
   const [service, setService] = useState<string>(defaultService ?? "");
   const [period, setPeriod] = useState<string>("");
@@ -187,8 +187,8 @@ function Field({
 }: {
   label: string;
   htmlFor: string;
-  error?: string;
-  className?: string;
+  error?: string | undefined;
+  className?: string | undefined;
   children: React.ReactNode;
 }) {
   return (
